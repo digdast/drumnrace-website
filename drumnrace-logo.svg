@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 100" fill="none">
+  <defs>
+    <linearGradient id="neonGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22C55E"/>
+      <stop offset="100%" stop-color="#A3E635"/>
+    </linearGradient>
+    <linearGradient id="silverPlate" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#94A3B8"/>
+      <stop offset="50%" stop-color="#F1F5F9"/>
+      <stop offset="100%" stop-color="#64748B"/>
+    </linearGradient>
+  </defs>
+  <!-- Tachometer Gauge / Turbo Impeller Icon -->
+  <g transform="translate(10, 8)">
+    <circle cx="42" cy="42" r="40" stroke="#1E293B" stroke-width="4" fill="#0B0F17" />
+    <path d="M 12 55 A 32 32 0 1 1 72 55" stroke="#334155" stroke-width="6" stroke-linecap="round" fill="none" />
+    <path d="M 12 55 A 32 32 0 0 1 58 18" stroke="url(#neonGlow)" stroke-width="6" stroke-linecap="round" fill="none" />
+    <!-- Tacho ticks -->
+    <line x1="42" y1="16" x2="42" y2="22" stroke="#A3E635" stroke-width="2.5" />
+    <line x1="24" y1="24" x2="28" y2="28" stroke="#22C55E" stroke-width="2.5" />
+    <line x1="60" y1="24" x2="56" y2="28" stroke="#EF4444" stroke-width="3" />
+    <!-- Center needle and bolt -->
+    <polygon points="42,39 64,22 43,45" fill="#EF4444" />
+    <circle cx="42" cy="42" r="8" fill="url(#silverPlate)" stroke="#0F172A" stroke-width="2" />
+    <!-- Skid marks -->
+    <path d="M 68 62 Q 80 55 92 68" stroke="url(#neonGlow)" stroke-width="3" stroke-linecap="round" />
+    <path d="M 72 68 Q 84 62 96 74" stroke="url(#neonGlow)" stroke-width="2" stroke-linecap="round" />
+  </g>
+  <!-- Text Brand -->
+  <g transform="translate(112, 18)">
+    <text x="0" y="42" font-family="'Impact', 'Arial Black', sans-serif" font-size="44" font-style="italic" fill="#F8FAFC" letter-spacing="2">DRUM<tspan fill="#22C55E">'N'</tspan>RACE</text>
+    <rect x="0" y="52" width="230" height="4" fill="url(#neonGlow)" rx="2" />
+    <text x="0" y="68" font-family="'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="12" fill="#94A3B8" letter-spacing="4">USA GRASSROOTS DRIFT &amp; MODS</text>
+  </g>
+  <!-- US Flag Badge Outline -->
+  <g transform="translate(440, 28)">
+    <rect width="64" height="38" rx="4" fill="#0B0F17" stroke="#334155" stroke-width="1.5" />
+    <rect x="3" y="3" width="58" height="32" rx="2" fill="#1E293B" />
+    <line x1="3" y1="8" x2="61" y2="8" stroke="#EF4444" stroke-width="2" />
+    <line x1="3" y1="14" x2="61" y2="14" stroke="#F8FAFC" stroke-width="2" />
+    <line x1="3" y1="20" x2="61" y2="20" stroke="#EF4444" stroke-width="2" />
+    <line x1="3" y1="26" x2="61" y2="26" stroke="#F8FAFC" stroke-width="2" />
+    <line x1="3" y1="32" x2="61" y2="32" stroke="#EF4444" stroke-width="2" />
+    <rect x="3" y="3" width="24" height="18" fill="#1D4ED8" />
+    <circle cx="15" cy="12" r="4" fill="#F8FAFC" />
+  </g>
+</svg>

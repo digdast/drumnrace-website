@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DRUM 'N' RACE USA // Grassroots Drift Culture, Junkyard Swaps & Car Modifications</title>
+  <meta name="description" content="America's premier homebrew drift racing portal. Track grassroots US drift venues, explore junkyard LS & turbo swaps, calculate angle kit geometry, and find local aftermarket parts.">
+  <meta name="keywords" content="drifting, grassroots drift, US drift racing, homebrew drift car, LS swap, 350z angle kit, E46 drift build, hydro handbrake, wisefab, coilovers, car modifications, welded diff">
+  <meta name="author" content="Drum 'N' Race USA">
+  <meta name="robots" content="index, follow">
+
+  <!-- OpenGraph / Social Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://drumnrace.com/">
+  <meta property="og:title" content="DRUM 'N' RACE USA // Grassroots Drift Racing & Modifications">
+  <meta property="og:description" content="The American grassroots drift racing hub. Local track radar, budget build calculators, and aftermarket swap guides.">
+  <meta property="og:image" content="https://drumnrace.com/drumnrace-logo.svg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            asphalt: '#070A0F',
+            chassis: '#0B111A',
+            garage: '#131D2A',
+            neon: {
+              lime: '#22C55E',
+              acid: '#A3E635',
+              amber: '#F59E0B',
+              red: '#EF4444'
+            }
+          },
+          fontFamily: {
+            mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'monospace'],
+            stencil: ['Impact', 'Arial Black', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Google AdSense with Page-Level Auto-Ads -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1596056523034714"
+     crossorigin="anonymous"></script>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: "ca-pub-1596056523034714",
+      enable_page_level_ads: true
+    });
+  </script>
+
+  <!-- Structured Data JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Drum 'N' Race USA",
+    "url": "https://drumnrace.com",
+    "description": "USA Grassroots Drift Racing, Junkyard Swaps & Aftermarket Car Modifications",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://drumnrace.com/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <style>
+    /* Racing checkered subtle pattern */
+    .bg-grid-pattern {
+      background-size: 28px 28px;
+      background-image: 
+        linear-gradient(to right, rgba(34, 197, 94, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(34, 197, 94, 0.05) 1px, transparent 1px);
+    }
+    .neon-border {
+      box-shadow: 0 0 15px rgba(34, 197, 94, 0.15), inset 0 0 15px rgba(34, 197, 94, 0.05);
+    }
+    .neon-text-glow {
+      text-shadow: 0 0 12px rgba(163, 230, 53, 0.4);
+    }
+  </style>
+</head>
+<body class="bg-asphalt text-slate-100 min-h-screen font-sans selection:bg-neon-lime selection:text-black bg-grid-pattern">
+
+  <!-- TOP SPEED TICKER -->
+  <div class="bg-chassis border-b border-slate-800 text-xs py-2 px-4 overflow-hidden">
+    <div class="max-w-7xl mx-auto flex items-center justify-between gap-4">
+      <div class="flex items-center gap-2 text-neon-acid font-mono font-bold whitespace-nowrap">
+        <span class="inline-block w-2 h-2 rounded-full bg-neon-lime animate-ping"></span>
+        <span class="uppercase tracking-wider">USA Grassroots Wire</span>
+      </div>
+      <div class="flex-1 overflow-x-auto no-scrollbar whitespace-nowrap text-slate-300 font-mono text-[11px] flex gap-8">
+        <span>🏁 <strong>SHAWANO, WI:</strong> Final Bout Midwest Special Stage Registration Active</span>
+        <span>⚡ <strong>APPLE VALLEY, CA:</strong> Night Tandems Under Lights - Saturday 6PM</span>
+        <span>🔧 <strong>KIL-KARE, OH:</strong> Drift Indy Street League Round 2 Tech Inspection Open</span>
+        <span>🔥 <strong>BRASLETON, GA:</strong> Lanier Raceplex Infield Oval Shootout Underway</span>
+      </div>
+      <div class="hidden md:flex items-center gap-3 text-slate-400 font-mono text-xs">
+        <span class="text-neon-lime">LOCAL US RADAR</span>
+        <span>•</span>
+        <span>MOD TECH</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVIGATION HEADER -->
+  <header class="sticky top-0 z-50 bg-asphalt/95 backdrop-blur-md border-b border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- BRAND LOGO -->
+      <a href="/" class="flex items-center gap-3 group">
+        <img src="/drumnrace-logo.svg" alt="Drum 'N' Race USA" class="h-11 w-auto transition-transform group-hover:scale-105" />
+      </a>
+
+      <!-- NAV LINKS -->
+      <nav class="hidden md:flex items-center gap-6 text-sm font-bold tracking-wider uppercase">
+        <a href="#tracks" class="text-slate-300 hover:text-neon-lime transition-colors flex items-center gap-1.5">
+          <i data-lucide="map-pin" class="w-4 h-4 text-neon-lime"></i> US Track Radar
+        </a>
+        <a href="#calculator" class="text-slate-300 hover:text-neon-lime transition-colors flex items-center gap-1.5">
+          <i data-lucide="calculator" class="w-4 h-4 text-neon-acid"></i> Mod Calculator
+        </a>
+        <a href="#tech-guides" class="text-slate-300 hover:text-neon-lime transition-colors flex items-center gap-1.5">
+          <i data-lucide="wrench" class="w-4 h-4 text-neon-amber"></i> Swap Guides
+        </a>
+        <a href="#swap-meet" class="text-slate-300 hover:text-neon-lime transition-colors flex items-center gap-1.5">
+          <i data-lucide="tag" class="w-4 h-4 text-neon-lime"></i> Swap Meet
+        </a>
+      </nav>
+
+      <!-- CTA ACTION -->
+      <div class="flex items-center gap-3">
+        <button onclick="openModal('post-part-modal')" class="bg-neon-lime hover:bg-neon-acid text-black font-extrabold text-xs uppercase px-4 py-2.5 rounded-lg flex items-center gap-2 transition-all shadow-lg shadow-neon-lime/20 transform hover:-translate-y-0.5">
+          <i data-lucide="plus-circle" class="w-4 h-4"></i> Post Parts
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- GOOGLE ADSENSE BILLBOARD BANNER (TOP) -->
+  <div class="max-w-7xl mx-auto px-4 pt-4">
+    <div class="bg-chassis/60 border border-slate-800 rounded-xl p-3 text-center">
+      <div class="text-[10px] uppercase font-mono text-slate-500 tracking-widest mb-1.5">Sponsored Aftermarket Automotive Partners</div>
+      <ins class="adsbygoogle"
+           style="display:block; min-height:90px;"
+           data-ad-client="ca-pub-1596056523034714"
+           data-ad-slot="auto"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section class="relative overflow-hidden py-16 sm:py-24 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <!-- Hero Left Column -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-neon-lime/10 border border-neon-lime/30 text-neon-acid text-xs font-mono font-bold">
+            <i data-lucide="gauge" class="w-3.5 h-3.5"></i> AMERICA'S GRASSROOTS DRIFT NETWORK
+          </div>
+          <h1 class="text-4xl sm:text-6xl font-stencil uppercase tracking-tight text-white leading-none">
+            DRUM <span class="text-neon-lime neon-text-glow">'N'</span> RACE <br>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-slate-100 via-slate-300 to-slate-500">HOMEBREW GARAGE &amp; MODS</span>
+          </h1>
+          <p class="text-slate-300 text-base sm:text-lg max-w-2xl leading-relaxed">
+            Built for American drifters turning parking-lot missiles into door-to-door tandem machines. Explore regional US grassroots circuits, junkyard 5.3 LS swap blueprints, steering angle geometry, and budget chassis modifications.
+          </p>
+          <!-- Hero Badges -->
+          <div class="grid grid-cols-3 gap-3 pt-2 text-center font-mono">
+            <div class="bg-chassis border border-slate-800 p-3 rounded-xl">
+              <div class="text-2xl font-bold text-neon-lime">65°+</div>
+              <div class="text-[11px] text-slate-400 uppercase">Max Angle Kits</div>
+            </div>
+            <div class="bg-chassis border border-slate-800 p-3 rounded-xl">
+              <div class="text-2xl font-bold text-neon-acid">50 State</div>
+              <div class="text-[11px] text-slate-400 uppercase">Grassroots Tracks</div>
+            </div>
+            <div class="bg-chassis border border-slate-800 p-3 rounded-xl">
+              <div class="text-2xl font-bold text-neon-amber">$3.5K</div>
+              <div class="text-[11px] text-slate-400 uppercase">Avg Drift Build</div>
+            </div>
+          </div>
+          <!-- Hero Actions -->
+          <div class="flex flex-wrap gap-4 pt-2">
+            <a href="#calculator" class="bg-neon-lime hover:bg-neon-acid text-black font-extrabold px-6 py-3.5 rounded-xl uppercase text-sm tracking-wider flex items-center gap-2 transition-all shadow-lg shadow-neon-lime/20">
+              <i data-lucide="sliders" class="w-4 h-4"></i> Calculate Build Budget
+            </a>
+            <a href="#tech-guides" class="bg-garage hover:bg-slate-800 text-slate-200 border border-slate-700 font-bold px-6 py-3.5 rounded-xl uppercase text-sm tracking-wider flex items-center gap-2 transition-colors">
+              <i data-lucide="book-open" class="w-4 h-4 text-neon-lime"></i> Swap &amp; Mod Blueprints
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Right Column: Live Track Radar Widget -->
+        <div class="lg:col-span-5">
+          <div class="bg-chassis border-2 border-slate-800 hover:border-neon-lime/40 transition-colors rounded-2xl p-6 neon-border">
+            <div class="flex items-center justify-between pb-4 border-b border-slate-800">
+              <div class="flex items-center gap-2.5">
+                <span class="w-3 h-3 rounded-full bg-neon-lime animate-pulse"></span>
+                <span class="font-stencil uppercase tracking-wider text-sm text-white">Live US Drift Radar</span>
+              </div>
+              <span class="text-[10px] font-mono bg-slate-800 text-neon-acid px-2 py-1 rounded">THIS WEEKEND</span>
+            </div>
+            
+            <div class="divide-y divide-slate-800/80 mt-2 space-y-2">
+              <div class="pt-3 flex justify-between items-start">
+                <div>
+                  <h4 class="font-bold text-sm text-white">USAIR Motorsports Jam</h4>
+                  <p class="text-xs text-slate-400">Shawano, WI • Tight Kart Track</p>
+                </div>
+                <span class="text-xs font-mono font-bold text-neon-lime bg-neon-lime/10 px-2 py-0.5 rounded">MIDWEST</span>
+              </div>
+              <div class="pt-3 flex justify-between items-start">
+                <div>
+                  <h4 class="font-bold text-sm text-white">Grange Saturday Night Tandem</h4>
+                  <p class="text-xs text-slate-400">Apple Valley, CA • Oval Infield</p>
+                </div>
+                <span class="text-xs font-mono font-bold text-neon-acid bg-neon-acid/10 px-2 py-0.5 rounded">WEST COAST</span>
+              </div>
+              <div class="pt-3 flex justify-between items-start">
+                <div>
+                  <h4 class="font-bold text-sm text-white">Piedmont Shakedown 100</h4>
+                  <p class="text-xs text-slate-400">Greensboro, NC • 1/8 Mile Return</p>
+                </div>
+                <span class="text-xs font-mono font-bold text-neon-amber bg-neon-amber/10 px-2 py-0.5 rounded">EAST COAST</span>
+              </div>
+            </div>
+
+            <div class="mt-5 pt-4 border-t border-slate-800 flex justify-between items-center text-xs">
+              <span class="text-slate-400 font-mono">Grassroots Drivers Checked-In: <strong>418</strong></span>
+              <a href="#tracks" class="text-neon-lime hover:underline font-bold">View All 50 Tracks →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERACTIVE US DRIFT MOD & BUDGET CALCULATOR -->
+  <section id="calculator" class="py-16 bg-chassis border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-neon-acid/10 border border-neon-acid/30 text-neon-acid text-xs font-mono font-bold mb-3">
+          <i data-lucide="sliders-horizontal" class="w-3.5 h-3.5"></i> CHASSIS ENGINEERING TOOL
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-stencil uppercase tracking-tight text-white">
+          US Drift Build Budget &amp; Alignment Calculator
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base mt-2">
+          Select your American grassroots chassis and modification tier. Our engine calculates estimated modification investment, front steering angle, alignment geometry, and recommended tire pressures.
+        </p>
+      </div>
+
+      <div class="bg-asphalt border border-slate-800 rounded-2xl p-6 sm:p-8 neon-border grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <!-- Controls Column -->
+        <div class="lg:col-span-6 space-y-6">
+          <!-- Chassis Selection -->
+          <div>
+            <label class="block text-xs font-mono font-bold text-slate-300 uppercase mb-2">1. Select Base Drift Chassis</label>
+            <select id="calc-chassis" onchange="runCalculator()" class="w-full bg-garage border border-slate-700 rounded-xl px-4 py-3 text-sm font-bold text-white focus:outline-none focus:border-neon-lime">
+              <option value="z33">Nissan 350Z / 370Z (VQ35DE / HR - Best Grassroots Value)</option>
+              <option value="e46">BMW E46 330i / 325i (M54 - High Steering Lock Potential)</option>
+              <option value="fox">Ford Foxbody / New Edge Mustang (5.0 / 4.6 V8 Torquey RWD)</option>
+              <option value="is300">Lexus IS300 / Altezza (2JZ-GE NA-T Sleeper Platform)</option>
+              <option value="miata">Mazda Miata NA / NB (Budget Lightweight Agility Machine)</option>
+              <option value="s13">Nissan 240SX S13 / S14 (Classic US Drift Royalty)</option>
+            </select>
+          </div>
+
+          <!-- Mod Tier Selection -->
+          <div>
+            <label class="block text-xs font-mono font-bold text-slate-300 uppercase mb-2">2. Select Modification Stage</label>
+            <div class="grid grid-cols-3 gap-2" id="tier-buttons">
+              <button onclick="setTier(1)" id="tier-btn-1" class="tier-btn p-3 rounded-xl border border-neon-lime bg-neon-lime/10 text-neon-acid text-xs font-bold text-center transition-all">
+                STAGE 1<br><span class="text-[10px] text-slate-400 font-normal">Street Skids</span>
+              </button>
+              <button onclick="setTier(2)" id="tier-btn-2" class="tier-btn p-3 rounded-xl border border-slate-700 bg-garage text-slate-300 text-xs font-bold text-center transition-all hover:border-slate-500">
+                STAGE 2<br><span class="text-[10px] text-slate-400 font-normal">Tandem Spec</span>
+              </button>
+              <button onclick="setTier(3)" id="tier-btn-3" class="tier-btn p-3 rounded-xl border border-slate-700 bg-garage text-slate-300 text-xs font-bold text-center transition-all hover:border-slate-500">
+                STAGE 3<br><span class="text-[10px] text-slate-400 font-normal">LS / Turbo Pro</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Target Power Requirement -->
+          <div>
+            <label class="block text-xs font-mono font-bold text-slate-300 uppercase mb-2">3. Desired Horsepower Level</label>
+            <div class="flex items-center gap-4">
+              <input type="range" id="calc-hp" min="150" max="800" step="25" value="300" oninput="runCalculator()" class="flex-1 accent-neon-lime bg-slate-700 h-2 rounded-lg cursor-pointer">
+              <span id="calc-hp-val" class="font-mono font-extrabold text-lg text-neon-lime min-w-[70px]">300 HP</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Results Output Column -->
+        <div class="lg:col-span-6 bg-garage/70 border border-slate-700/80 rounded-xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between pb-3 border-b border-slate-700">
+              <span class="text-xs font-mono uppercase text-slate-400">Estimated Modification Breakdown</span>
+              <span id="calc-build-badge" class="text-xs font-mono font-bold px-2 py-0.5 rounded bg-neon-lime text-black">STAGE 1 READY</span>
+            </div>
+
+            <!-- Major Metrics -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 my-4">
+              <div class="bg-asphalt p-3 rounded-lg border border-slate-800">
+                <span class="text-[10px] text-slate-400 font-mono uppercase block">Estimated Parts $</span>
+                <span id="res-cost" class="text-xl font-extrabold text-neon-acid">$1,850</span>
+              </div>
+              <div class="bg-asphalt p-3 rounded-lg border border-slate-800">
+                <span class="text-[10px] text-slate-400 font-mono uppercase block">Steering Lock</span>
+                <span id="res-angle" class="text-xl font-extrabold text-white">52°</span>
+              </div>
+              <div class="bg-asphalt p-3 rounded-lg border border-slate-800">
+                <span class="text-[10px] text-slate-400 font-mono uppercase block">Front Camber</span>
+                <span id="res-camber" class="text-xl font-extrabold text-neon-lime">-4.5°</span>
+              </div>
+              <div class="bg-asphalt p-3 rounded-lg border border-slate-800">
+                <span class="text-[10px] text-slate-400 font-mono uppercase block">Rear Cold PSI</span>
+                <span id="res-psi" class="text-xl font-extrabold text-neon-amber">26 PSI</span>
+              </div>
+            </div>
+
+            <!-- Modification Checklist -->
+            <div>
+              <span class="text-xs font-mono uppercase text-slate-300 font-bold block mb-2">Recommended Aftermarket Parts:</span>
+              <ul id="res-parts" class="space-y-1.5 text-xs text-slate-300 font-mono">
+                <!-- Injected via JavaScript -->
+              </ul>
+            </div>
+          </div>
+
+          <div class="mt-4 pt-3 border-t border-slate-700 flex justify-between items-center text-xs text-slate-400">
+            <span>Engineering notes: Valved for 235/40R18 Valino or Kenda KR20A</span>
+            <span class="text-neon-lime font-bold">100% Garage Verified</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- US GRASSROOTS DRIFT TRACK & JAM RADAR -->
+  <section id="tracks" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+      <div>
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-neon-lime/10 border border-neon-lime/30 text-neon-lime text-xs font-mono font-bold mb-2">
+          <i data-lucide="compass" class="w-3.5 h-3.5"></i> STATE-BY-STATE DRIFT CIRCUITS
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-stencil uppercase tracking-tight text-white">
+          US Grassroots Drift Venues
+        </h2>
+        <p class="text-slate-400 text-sm mt-1">Open track days, weekend tandem bashes, and grassroots amateur shootout rounds.</p>
+      </div>
+
+      <!-- Region Filter Tabs -->
+      <div class="flex flex-wrap gap-2 text-xs font-bold font-mono">
+        <button onclick="filterTracks('all')" class="track-filter-btn px-3 py-1.5 rounded-lg bg-neon-lime text-black uppercase transition-all">All USA</button>
+        <button onclick="filterTracks('Midwest')" class="track-filter-btn px-3 py-1.5 rounded-lg bg-garage text-slate-300 hover:text-white uppercase transition-all">Midwest</button>
+        <button onclick="filterTracks('East Coast')" class="track-filter-btn px-3 py-1.5 rounded-lg bg-garage text-slate-300 hover:text-white uppercase transition-all">East Coast</button>
+        <button onclick="filterTracks('West Coast')" class="track-filter-btn px-3 py-1.5 rounded-lg bg-garage text-slate-300 hover:text-white uppercase transition-all">West Coast</button>
+        <button onclick="filterTracks('South')" class="track-filter-btn px-3 py-1.5 rounded-lg bg-garage text-slate-300 hover:text-white uppercase transition-all">South</button>
+      </div>
+    </div>
+
+    <!-- Tracks Grid -->
+    <div id="tracks-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Injected via JavaScript -->
+    </div>
+  </section>
+
+  <!-- MID-CONTENT GOOGLE ADSENSE BANNER -->
+  <div class="max-w-7xl mx-auto px-4 py-6">
+    <div class="bg-chassis/60 border border-slate-800 rounded-xl p-3 text-center">
+      <div class="text-[10px] uppercase font-mono text-slate-500 tracking-widest mb-1.5">Featured Aftermarket Speed Equipment &amp; Tuning Ads</div>
+      <ins class="adsbygoogle"
+           style="display:block; min-height:90px;"
+           data-ad-client="ca-pub-1596056523034714"
+           data-ad-slot="auto"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+  </div>
+
+  <!-- CAR MODIFICATION & JUNKYARD SWAP GUIDES (HIGH CPC AUTO KEYWORDS) -->
+  <section id="tech-guides" class="py-16 bg-chassis border-t border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-neon-amber/10 border border-neon-amber/30 text-neon-amber text-xs font-mono font-bold mb-2">
+          <i data-lucide="wrench" class="w-3.5 h-3.5"></i> GARAGE BLUEPRINTS &amp; AFTERMARKET TECH
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-stencil uppercase tracking-tight text-white">
+          Homebrew Modification Tech Guides
+        </h2>
+        <p class="text-slate-400 text-sm mt-1">Real-world DIY blueprints written by grassroots drivers who turn wrenches late at night.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Tech Card 1: LS Junkyard Swap -->
+        <div class="bg-asphalt border border-slate-800 hover:border-neon-lime/40 transition-all rounded-xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-xs font-mono mb-3">
+              <span class="text-neon-lime font-bold">ENGINE SWAPS</span>
+              <span class="text-slate-500">450+ WHP</span>
+            </div>
+            <h3 class="font-stencil text-xl text-white mb-2">Junkyard 5.3L Vortec LM7 Swap Blueprint</h3>
+            <p class="text-slate-400 text-xs leading-relaxed mb-4">
+              How to source a clean GM iron block 5.3L from a Tahoe/Suburban, install a BTR Stage 3 cam, LS6 intake, and mate it to a Nissan CD009 transmission via Collins adapter for under $4,200 total.
+            </p>
+          </div>
+          <div class="border-t border-slate-800/80 pt-3 flex items-center justify-between text-xs font-mono">
+            <span class="text-slate-400">ECU: Holley Terminator X</span>
+            <button onclick="openModal('mod-guide-modal')" class="text-neon-lime font-bold hover:underline">Read Tech Spec →</button>
+          </div>
+        </div>
+
+        <!-- Tech Card 2: Angle Kits 101 -->
+        <div class="bg-asphalt border border-slate-800 hover:border-neon-lime/40 transition-all rounded-xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-xs font-mono mb-3">
+              <span class="text-neon-acid font-bold">STEERING GEOMETRY</span>
+              <span class="text-slate-500">65°+ LOCK</span>
+            </div>
+            <h3 class="font-stencil text-xl text-white mb-2">Steering Angle: Cut Knuckles vs FDF vs Wisefab</h3>
+            <p class="text-slate-400 text-xs leading-relaxed mb-4">
+              Understanding Ackerman effect, dynamic scrub radius, and rack offsets. Comparing budget modified OEM spindles against engineered billet lock kits for BMW E46 and Nissan 350Z.
+            </p>
+          </div>
+          <div class="border-t border-slate-800/80 pt-3 flex items-center justify-between text-xs font-mono">
+            <span class="text-slate-400">Lock: 68° Maximum</span>
+            <button onclick="openModal('mod-guide-modal')" class="text-neon-acid font-bold hover:underline">Read Tech Spec →</button>
+          </div>
+        </div>
+
+        <!-- Tech Card 3: Dual Caliper Hydro Handbrake -->
+        <div class="bg-asphalt border border-slate-800 hover:border-neon-lime/40 transition-all rounded-xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-xs font-mono mb-3">
+              <span class="text-neon-amber font-bold">BRAKING DYNAMICS</span>
+              <span class="text-slate-500">INSTANT LOCK</span>
+            </div>
+            <h3 class="font-stencil text-xl text-white mb-2">Dual-Caliper Hydro E-Brake Plumbing</h3>
+            <p class="text-slate-400 text-xs leading-relaxed mb-4">
+              Why inline setups introduce squishy brake pedals, and how to bolt on standalone secondary Wilwood calipers using dual caliper brackets and 0.625" Wilwood master cylinders for instant rear lockup.
+            </p>
+          </div>
+          <div class="border-t border-slate-800/80 pt-3 flex items-center justify-between text-xs font-mono">
+            <span class="text-slate-400">Master: 5/8" Bore Size</span>
+            <button onclick="openModal('mod-guide-modal')" class="text-neon-amber font-bold hover:underline">Read Tech Spec →</button>
+          </div>
+        </div>
+
+        <!-- Tech Card 4: Differential Shootout -->
+        <div class="bg-asphalt border border-slate-800 hover:border-neon-lime/40 transition-all rounded-xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-xs font-mono mb-3">
+              <span class="text-neon-lime font-bold">DRIVETRAIN</span>
+              <span class="text-slate-500">TRACTION</span>
+            </div>
+            <h3 class="font-stencil text-xl text-white mb-2">Welded Diff vs 2-Way LSD vs Ford 8.8 IRS</h3>
+            <p class="text-slate-400 text-xs leading-relaxed mb-4">
+              Lincoln locker welding best practices, pre-heating the carrier, Kaaz/Tomei clutch-type LSD initial torque, and swapping bulletproof Ford Explorer 8.8 differentials into Nissan S-chassis.
+            </p>
+          </div>
+          <div class="border-t border-slate-800/80 pt-3 flex items-center justify-between text-xs font-mono">
+            <span class="text-slate-400">Ratio: 3.73 / 4.10 Final</span>
+            <button onclick="openModal('mod-guide-modal')" class="text-neon-lime font-bold hover:underline">Read Tech Spec →</button>
+          </div>
+        </div>
+
+        <!-- Tech Card 5: Coilover Tuning & Rear Grip -->
+        <div class="bg-asphalt border border-slate-800 hover:border-neon-lime/40 transition-all rounded-xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-xs font-mono mb-3">
+              <span class="text-neon-acid font-bold">SUSPENSION</span>
+              <span class="text-slate-500">REAR BITE</span>
+            </div>
+            <h3 class="font-stencil text-xl text-white mb-2">Coilover Valving &amp; Squat Dynamics for Grip</h3>
+            <p class="text-slate-400 text-xs leading-relaxed mb-4">
+              Modern drifting is about speed and rear grip, not sliding on ice. How to valve rear coilovers soft with zero rear toe and slight toe-in under compression to propel the car off the clipping point.
+            </p>
+          </div>
+          <div class="border-t border-slate-800/80 pt-3 flex items-center justify-between text-xs font-mono">
+            <span class="text-slate-400">Springs: 10k Front / 6k Rear</span>
+            <button onclick="openModal('mod-guide-modal')" class="text-neon-acid font-bold hover:underline">Read Tech Spec →</button>
+          </div>
+        </div>
+
+        <!-- Tech Card 6: DIY Turbo Kits & Standalone ECUs -->
+        <div class="bg-asphalt border border-slate-800 hover:border-neon-lime/40 transition-all rounded-xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-xs font-mono mb-3">
+              <span class="text-neon-amber font-bold">FORCED INDUCTION</span>
+              <span class="text-slate-500">BOOST</span>
+            </div>
+            <h3 class="font-stencil text-xl text-white mb-2">Budget Turbocharging: KA24DE &amp; BMW M54</h3>
+            <p class="text-slate-400 text-xs leading-relaxed mb-4">
+              Cast iron top-mount manifolds, Garrett GT3076R clones, 44mm external wastegates, front-mount bar-and-plate intercoolers, and wiring up standalone MegaSquirt MS3X or Link G4X.
+            </p>
+          </div>
+          <div class="border-t border-slate-800/80 pt-3 flex items-center justify-between text-xs font-mono">
+            <span class="text-slate-400">Boost: 12-14 PSI Safe</span>
+            <button onclick="openModal('mod-guide-modal')" class="text-neon-amber font-bold hover:underline">Read Tech Spec →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- US GRASSROOTS SWAP MEET / AFTERMARKET PARTS BOARD -->
+  <section id="swap-meet" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+      <div>
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-neon-acid/10 border border-neon-acid/30 text-neon-acid text-xs font-mono font-bold mb-2">
+          <i data-lucide="shopping-cart" class="w-3.5 h-3.5"></i> COMMUNITY CLASSIFIEDS
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-stencil uppercase tracking-tight text-white">
+          US Drift Swap Meet &amp; Parts Board
+        </h2>
+        <p class="text-slate-400 text-sm mt-1">Grassroots drivers buying, trading, and selling knuckles, turbo manifolds, transmissions, and tires.</p>
+      </div>
+
+      <button onclick="openModal('post-part-modal')" class="bg-neon-lime hover:bg-neon-acid text-black font-extrabold text-xs uppercase px-5 py-2.5 rounded-lg flex items-center gap-2 transition-all shadow-md self-start md:self-auto">
+        <i data-lucide="plus" class="w-4 h-4"></i> Post Drift Part Listing
+      </button>
+    </div>
+
+    <!-- Parts Grid -->
+    <div id="parts-board-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+      <!-- Injected via JavaScript -->
+    </div>
+  </section>
+
+  <!-- GOOGLE ADSENSE IN-CONTENT BANNER (FOOTER TOP) -->
+  <div class="max-w-7xl mx-auto px-4 pb-12">
+    <div class="bg-chassis/60 border border-slate-800 rounded-xl p-3 text-center">
+      <div class="text-[10px] uppercase font-mono text-slate-500 tracking-widest mb-1.5">Sponsored Drift Performance &amp; Car Part Specials</div>
+      <ins class="adsbygoogle"
+           style="display:block; min-height:90px;"
+           data-ad-client="ca-pub-1596056523034714"
+           data-ad-slot="auto"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-chassis border-t border-slate-800 py-12 text-slate-400 text-xs font-mono">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div class="space-y-3">
+        <img src="/drumnrace-logo.svg" alt="Drum 'N' Race USA" class="h-8 w-auto" />
+        <p class="text-slate-500 text-[11px] leading-relaxed">
+          DRUM 'N' RACE USA is the independent homebrew drift racing and automotive modification community portal. Dedicated to grassroots American tracks, backyard wrenching, and keeping grassroots tandem alive.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="font-stencil text-sm text-white uppercase tracking-wider mb-3">Popular Mod Topics</h4>
+        <ul class="space-y-1.5 text-slate-400">
+          <li><a href="#calculator" class="hover:text-neon-lime">Nissan 350Z Drift Angle Kits</a></li>
+          <li><a href="#calculator" class="hover:text-neon-lime">BMW E46 M54 Turbo Conversions</a></li>
+          <li><a href="#tech-guides" class="hover:text-neon-lime">Junkyard LM7 5.3L LS Swaps</a></li>
+          <li><a href="#tech-guides" class="hover:text-neon-lime">Dual Caliper Hydro Handbrakes</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-stencil text-sm text-white uppercase tracking-wider mb-3">US Drift Regions</h4>
+        <ul class="space-y-1.5 text-slate-400">
+          <li><a href="#tracks" class="hover:text-neon-lime">Midwest Drift Indy / Shawano</a></li>
+          <li><a href="#tracks" class="hover:text-neon-lime">SoCal Apple Valley &amp; Grange</a></li>
+          <li><a href="#tracks" class="hover:text-neon-lime">East Coast Englishtown &amp; Piedmont</a></li>
+          <li><a href="#tracks" class="hover:text-neon-lime">Southeast Lanier Raceplex</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-stencil text-sm text-white uppercase tracking-wider mb-3">Compliance &amp; Legal</h4>
+        <ul class="space-y-1.5 text-slate-400">
+          <li><a href="javascript:openModal('privacy-modal')" class="hover:text-neon-lime">Privacy Policy (GDPR / CCPA)</a></li>
+          <li><a href="javascript:openModal('terms-modal')" class="hover:text-neon-lime">Terms of Service</a></li>
+          <li><a href="/ads.txt" class="hover:text-neon-lime">Authorized Digital Ads (ads.txt)</a></li>
+          <li><a href="/sitemap.xml" class="hover:text-neon-lime">XML Sitemap</a></li>
+        </ul>
+        <p class="text-[10px] text-slate-600 mt-4">
+          Publisher ID: ca-pub-1596056523034714<br>
+          © 2026 DRUM 'N' RACE USA. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL: POST PART / SWAP MEET SUBMISSION -->
+  <div id="post-part-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-chassis border border-slate-700 rounded-2xl max-w-lg w-full p-6 text-left shadow-2xl relative">
+      <button onclick="closeModal('post-part-modal')" class="absolute top-4 right-4 text-slate-400 hover:text-white">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+      <div class="flex items-center gap-2 mb-4">
+        <i data-lucide="tag" class="w-5 h-5 text-neon-lime"></i>
+        <h3 class="font-stencil text-xl text-white uppercase tracking-wider">Post Part to Swap Meet Board</h3>
+      </div>
+      <form id="part-form" onsubmit="submitPart(event)" class="space-y-4 text-xs font-mono">
+        <div>
+          <label class="block text-slate-400 mb-1">Part Title &amp; Application</label>
+          <input type="text" id="part-title" required placeholder="e.g. Nissan 350Z Wisefab V2 Front Angle Kit" class="w-full bg-asphalt border border-slate-700 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-neon-lime">
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-slate-400 mb-1">Asking Price ($ USD)</label>
+            <input type="text" id="part-price" required placeholder="$750 OBO" class="w-full bg-asphalt border border-slate-700 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-neon-lime">
+          </div>
+          <div>
+            <label class="block text-slate-400 mb-1">US Region / Location</label>
+            <input type="text" id="part-loc" required placeholder="Chicago, IL (Midwest)" class="w-full bg-asphalt border border-slate-700 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-neon-lime">
+          </div>
+        </div>
+        <div>
+          <label class="block text-slate-400 mb-1">Category</label>
+          <select id="part-category" class="w-full bg-asphalt border border-slate-700 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-neon-lime">
+            <option>Steering / Angle Kits</option>
+            <option>Engine / Swaps / Turbo</option>
+            <option>Brakes / Dual Caliper Hydro</option>
+            <option>Drivetrain / Welded Diff / Trans</option>
+            <option>Wheels &amp; Drift Rubber</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-slate-400 mb-1">Condition &amp; Description</label>
+          <textarea id="part-desc" rows="3" required placeholder="Brand new in box, includes offset rack spacers and spherical tie rods..." class="w-full bg-asphalt border border-slate-700 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-neon-lime"></textarea>
+        </div>
+        <button type="submit" class="w-full bg-neon-lime hover:bg-neon-acid text-black font-extrabold py-3 rounded-lg uppercase tracking-wider text-xs transition-colors">
+          Publish Part to Live Board
+        </button>
+      </form>
+      <div id="part-msg" class="hidden mt-3 text-center text-xs font-mono text-neon-acid"></div>
+    </div>
+  </div>
+
+  <!-- MODAL: TECH SPEC PREVIEW -->
+  <div id="mod-guide-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-chassis border border-slate-700 rounded-2xl max-w-lg w-full p-6 text-left shadow-2xl relative">
+      <button onclick="closeModal('mod-guide-modal')" class="absolute top-4 right-4 text-slate-400 hover:text-white">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+      <div class="flex items-center gap-2 mb-2">
+        <i data-lucide="wrench" class="w-5 h-5 text-neon-lime"></i>
+        <h3 class="font-stencil text-xl text-white uppercase tracking-wider">Blueprint Tech Overview</h3>
+      </div>
+      <p class="text-xs text-slate-300 leading-relaxed font-mono mb-4">
+        All modification guides on DRUM 'N' RACE USA feature complete Bill of Materials (BOM), torque specifications, wiring pinouts for Holley/Haltech standalone systems, and recommended alignment baseline setups. Check back weekly as new homebrew chassis blueprints are unlocked.
+      </p>
+      <button onclick="closeModal('mod-guide-modal')" class="w-full bg-garage border border-slate-700 text-white font-mono text-xs py-2.5 rounded-lg hover:border-neon-lime">Close Guide</button>
+    </div>
+  </div>
+
+  <!-- MODAL: PRIVACY POLICY (GOOGLE ADSENSE COMPLIANT) -->
+  <div id="privacy-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-chassis border border-slate-700 rounded-2xl max-w-2xl w-full p-6 text-left shadow-2xl relative max-h-[80vh] overflow-y-auto">
+      <button onclick="closeModal('privacy-modal')" class="absolute top-4 right-4 text-slate-400 hover:text-white">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+      <h3 class="font-stencil text-2xl text-white uppercase tracking-wider mb-4">Privacy Policy</h3>
+      <div class="text-xs text-slate-300 space-y-3 font-mono leading-relaxed">
+        <p><strong>Effective Date:</strong> November 5, 2026</p>
+        <p>DRUM 'N' RACE USA ("we", "us", or "our") respects your privacy. This policy explains how we collect and use data across <strong>drumnrace.com</strong>.</p>
+        <h4 class="text-sm font-bold text-white uppercase">1. Google AdSense &amp; Advertising Cookies</h4>
+        <p>We use Google AdSense (Publisher ID: <code>ca-pub-1596056523034714</code>) to serve automotive advertisements when you visit our website. Google and its third-party advertising partners may use cookies (including the DoubleClick cookie) to serve targeted ads based on your visit to this site and other sites across the internet.</p>
+        <p>You may opt out of personalized advertising by visiting Google's <a href="https://adssettings.google.com/" target="_blank" class="text-neon-lime underline">Ads Settings</a> or by visiting <a href="https://www.aboutads.info/" target="_blank" class="text-neon-lime underline">AboutAds.info</a>.</p>
+        <h4 class="text-sm font-bold text-white uppercase">2. Log Files &amp; Web Analytics</h4>
+        <p>Like standard web servers, we maintain anonymous access logs containing IP addresses, browser user-agents, referral pages, and timestamps to diagnose technical faults and optimize worldwide speed.</p>
+        <h4 class="text-sm font-bold text-white uppercase">3. Contact</h4>
+        <p>For questions or privacy requests regarding drumnrace.com, contact <code>admin@drumnrace.com</code>.</p>
+      </div>
+      <button onclick="closeModal('privacy-modal')" class="mt-6 w-full bg-neon-lime text-black font-extrabold py-2.5 rounded-lg text-xs font-mono uppercase">Close Privacy Policy</button>
+    </div>
+  </div>
+
+  <!-- MODAL: TERMS OF SERVICE -->
+  <div id="terms-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-chassis border border-slate-700 rounded-2xl max-w-xl w-full p-6 text-left shadow-2xl relative">
+      <button onclick="closeModal('terms-modal')" class="absolute top-4 right-4 text-slate-400 hover:text-white">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+      <h3 class="font-stencil text-2xl text-white uppercase tracking-wider mb-4">Terms of Service</h3>
+      <div class="text-xs text-slate-300 space-y-3 font-mono leading-relaxed">
+        <p>By accessing <strong>drumnrace.com</strong>, you agree to these Terms. All automotive modification guides, horsepower calculators, and geometry setups are provided for informational, off-road, and closed-course motorsports use only.</p>
+        <p>Grassroots drifting carries inherent risks. Always wear appropriate Snell-approved helmets, SFI-rated fire suits, and inspect safety equipment prior to participating in any track event.</p>
+      </div>
+      <button onclick="closeModal('terms-modal')" class="mt-6 w-full bg-neon-lime text-black font-extrabold py-2.5 rounded-lg text-xs font-mono uppercase">I Understand</button>
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    // 1. DATA: US Grassroots Drift Tracks
+    const usTracks = [
+      {
+        id: "usair-shawano",
+        name: "USAIR Motorsports Raceway",
+        location: "Shawano, Wisconsin",
+        region: "Midwest",
+        type: "Tight Kart Track • Elevation Touge",
+        badge: "Grassroots Mecca",
+        events: "Final Bout SS, Club FR, Open Skid Days",
+        desc: "Famous for high-speed blind crest entries, massive elevation drops, and intimate spectator access. The standard for grassroots styling."
+      },
+      {
+        id: "grange-motor",
+        name: "Grange Motor Circuit",
+        location: "Apple Valley, California",
+        region: "West Coast",
+        type: "Technical Concrete Kart Track",
+        badge: "SoCal Legend",
+        events: "Apple Valley Tandems, Animal Style Jams",
+        desc: "High-angle, tight-radius hairpin corners where bumper-to-bumper 5-car tandem trains hone their proximity skills in the Mojave desert."
+      },
+      {
+        id: "kil-kare",
+        name: "Kil-Kare Raceway",
+        location: "Xenia, Ohio",
+        region: "Midwest",
+        type: "3/8-Mile Banked Oval & Infield",
+        badge: "Figure 8 Madness",
+        events: "Drift Indy Street League (DISL)",
+        desc: "Fast, unforgiving concrete walls and technical figure-8 infield transitions. Produces some of the most aggressive grassroots drivers in the nation."
+      },
+      {
+        id: "piedmont-dragway",
+        name: "Piedmont Dragway",
+        location: "Greensboro, North Carolina",
+        region: "East Coast",
+        type: "1/8-Mile Return Road & Paddock",
+        badge: "East Coast Door-Banger",
+        events: "Piedmont Drift Series, Street Shakedown",
+        desc: "High-energy Carolina grassroots events with non-stop open-skidpad sessions and tight tandem brackets under stadium lights."
+      },
+      {
+        id: "lanier-raceplex",
+        name: "Lanier Raceplex",
+        location: "Braselton, Georgia",
+        region: "South",
+        type: "3/8-Mile Asphalt Oval",
+        badge: "Under The Lights",
+        events: "Caffeine & Octane Lanier Drift Nights",
+        desc: "Banked oval drifting directly across from Road Atlanta. Wide entries, heavy tire smoke, and high-speed fluid momentum."
+      },
+      {
+        id: "spirit-peak",
+        name: "Spirit Peak Raceway",
+        location: "Toutle, Washington",
+        region: "West Coast",
+        type: "Mountain Kart Road Course",
+        badge: "PNW Mountain Jam",
+        events: "Spirit Peak Bash, PNW Tandem Cup",
+        desc: "Lush evergreen mountain views with tight blind switchbacks. Famous for low-horsepower momentum cars and authentic street aero."
+      }
+    ];
+
+    // 2. DATA: Swap Meet Initial Parts
+    let swapParts = [
+      {
+        title: "Nissan 350Z Wisefab V2 Front Angle Kit",
+        price: "$850",
+        loc: "Indianapolis, IN (Midwest)",
+        category: "Steering / Angle",
+        desc: "Used for 2 track events. 68 degrees of lock, zero binding, spherical bearings tight. Includes extended brake lines."
+      },
+      {
+        title: "BMW E46 Dual Caliper Hydro Handbrake Setup",
+        price: "$320",
+        loc: "Charlotte, NC (East Coast)",
+        category: "Brakes / Hydro",
+        desc: "Bolt-on dual caliper brackets, two rebuilt OEM 330i rear calipers, Wilwood 0.625 master and upright CNC handle."
+      },
+      {
+        title: "Collins CD009 to GM LS Adapter Plate + Flywheel",
+        price: "$550",
+        loc: "Dallas, TX (South)",
+        category: "Drivetrain",
+        desc: "Allows mounting bulletproof 350Z 6-speed transmission to 4.8 / 5.3 / 6.0 LS block. Brand new hardware included."
+      },
+      {
+        title: "Square Set: Kansei KNP 18x9.5 +12 5x114.3",
+        price: "$700",
+        loc: "Los Angeles, CA (West Coast)",
+        category: "Wheels / Tires",
+        desc: "Gloss gunmetal, no cracks or bends. Mounted with fresh 235/40R18 Kenda KR20A tires ready for the track."
+      }
+    ];
+
+    // 3. CALCULATOR LOGIC
+    let currentTier = 1;
+    function setTier(tier) {
+      currentTier = tier;
+      for (let i = 1; i <= 3; i++) {
+        const btn = document.getElementById(`tier-btn-${i}`);
+        if (i === tier) {
+          btn.className = "tier-btn p-3 rounded-xl border border-neon-lime bg-neon-lime/10 text-neon-acid text-xs font-bold text-center transition-all";
+        } else {
+          btn.className = "tier-btn p-3 rounded-xl border border-slate-700 bg-garage text-slate-300 text-xs font-bold text-center transition-all hover:border-slate-500";
+        }
+      }
+      runCalculator();
+    }
+
+    function runCalculator() {
+      const chassis = document.getElementById('calc-chassis').value;
+      const hp = parseInt(document.getElementById('calc-hp').value);
+      document.getElementById('calc-hp-val').innerText = `${hp} HP`;
+
+      let cost = 1200;
+      let angle = 50;
+      let camber = -3.5;
+      let psi = 30;
+      let badge = "STAGE 1 READY";
+      let partsList = [];
+
+      if (currentTier === 1) {
+        cost = 1400 + (hp > 250 ? 400 : 0);
+        angle = 52;
+        camber = -4.5;
+        psi = 28;
+        badge = "STAGE 1: STREET SKIDS";
+        partsList = [
+          "✓ Welded factory differential or spool (Zero budget traction)",
+          "✓ Entry-level street coilovers (BC Racing BR / Megan Racing)",
+          "✓ Offset rack spacers / Cut knuckles (+12° steering lock)",
+          "✓ Bucket seat with FIA 4-point harness for driver stability"
+        ];
+      } else if (currentTier === 2) {
+        cost = 3200 + (hp > 300 ? 800 : 0);
+        angle = 62;
+        camber = -5.5;
+        psi = 24;
+        badge = "STAGE 2: TANDEM COMPETITION";
+        partsList = [
+          "✓ Dual-caliper standalone hydraulic handbrake (Wilwood 5/8\")",
+          "✓ Engineered front angle kit (FDF Mantis or SLR Super Angle)",
+          "✓ Drift valved inverted coilovers with swift springs",
+          "✓ Mishimoto aluminum 3-row radiator + dual electric SPAL fans",
+          "✓ 4-point bolt-in or weld-in roll bar"
+        ];
+      } else {
+        cost = 6800 + Math.round((hp - 300) * 8);
+        angle = 68;
+        camber = -6.2;
+        psi = 20;
+        badge = "STAGE 3: PRO-SPEC MONSTER";
+        partsList = [
+          "✓ Wisefab / FDF Full Front & Rear Billet Suspension System",
+          "✓ 5.3L LS / 1JZ / Turbocharged Engine Build with Standalone ECU",
+          "✓ Quick-change or Ford 8.8 IRS Bulletproof Rear End",
+          "✓ SCCA / Formula D spec full 6-point DOM weld-in roll cage",
+          "✓ Lifeline 4.0L multi-nozzle fire suppression system"
+        ];
+      }
+
+      // Chassis specific tuning adjustments
+      if (chassis === 'z33') {
+        partsList.unshift("★ Z33 Spec: Delete rear spring buckets; convert to true rear coilovers.");
+      } else if (chassis === 'e46') {
+        partsList.unshift("★ E46 Spec: Weld subframe reinforcement plates before first track day!");
+      } else if (chassis === 'fox') {
+        partsList.unshift("★ Mustang Spec: Convert front K-member to tubular with SN95 front control arms.");
+      }
+
+      document.getElementById('res-cost').innerText = `$${cost.toLocaleString()}`;
+      document.getElementById('res-angle').innerText = `${angle}°`;
+      document.getElementById('res-camber').innerText = `${camber}°`;
+      document.getElementById('res-psi').innerText = `${psi} PSI`;
+      document.getElementById('calc-build-badge').innerText = badge;
+
+      const listEl = document.getElementById('res-parts');
+      listEl.innerHTML = partsList.map(p => `<li>${p}</li>`).join('');
+    }
+
+    // 4. RENDER TRACKS
+    function renderTracks(tracks) {
+      const container = document.getElementById('tracks-grid');
+      container.innerHTML = tracks.map(t => `
+        <div class="bg-chassis border border-slate-800 hover:border-neon-lime/40 transition-all rounded-xl p-6 flex flex-col justify-between neon-border">
+          <div>
+            <div class="flex items-center justify-between text-xs font-mono mb-2">
+              <span class="text-neon-lime font-bold">${t.region.toUpperCase()}</span>
+              <span class="text-slate-500 bg-slate-800/80 px-2 py-0.5 rounded text-[10px]">${t.badge}</span>
+            </div>
+            <h3 class="font-stencil text-xl text-white mb-1">${t.name}</h3>
+            <p class="text-xs text-slate-400 mb-3 flex items-center gap-1 font-mono">
+              <i data-lucide="map-pin" class="w-3.5 h-3.5 text-neon-acid"></i> ${t.location}
+            </p>
+            <p class="text-xs text-slate-300 leading-relaxed mb-4">${t.desc}</p>
+          </div>
+          <div class="border-t border-slate-800/80 pt-3 flex justify-between items-center text-xs font-mono">
+            <span class="text-slate-400 text-[11px] truncate max-w-[200px]">${t.events}</span>
+            <span class="text-neon-acid font-bold">Open Tandem</span>
+          </div>
+        </div>
+      `).join('');
+      lucide.createIcons();
+    }
+
+    function filterTracks(region) {
+      const btns = document.querySelectorAll('.track-filter-btn');
+      btns.forEach(b => {
+        if (b.innerText.toLowerCase() === region.toLowerCase() || (region === 'all' && b.innerText === 'ALL USA')) {
+          b.className = "track-filter-btn px-3 py-1.5 rounded-lg bg-neon-lime text-black uppercase transition-all font-bold";
+        } else {
+          b.className = "track-filter-btn px-3 py-1.5 rounded-lg bg-garage text-slate-300 hover:text-white uppercase transition-all";
+        }
+      });
+
+      if (region === 'all') {
+        renderTracks(usTracks);
+      } else {
+        renderTracks(usTracks.filter(t => t.region === region));
+      }
+    }
+
+    // 5. RENDER SWAP MEET PARTS
+    function renderParts(parts) {
+      const container = document.getElementById('parts-board-grid');
+      container.innerHTML = parts.map(p => `
+        <div class="bg-chassis border border-slate-800 hover:border-neon-lime/40 transition-all rounded-xl p-5 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-xs font-mono mb-2">
+              <span class="text-neon-acid font-extrabold text-base">${p.price}</span>
+              <span class="text-slate-500 text-[10px] bg-slate-800 px-2 py-0.5 rounded uppercase">${p.category}</span>
+            </div>
+            <h4 class="font-stencil text-base text-white leading-tight mb-2">${p.title}</h4>
+            <p class="text-xs text-slate-400 mb-3 leading-relaxed font-mono">${p.desc}</p>
+          </div>
+          <div class="border-t border-slate-800 pt-2 flex items-center justify-between text-[11px] font-mono text-slate-400">
+            <span>${p.loc}</span>
+            <span class="text-neon-lime font-bold">Verified Mod</span>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function submitPart(e) {
+      e.preventDefault();
+      const newPart = {
+        title: document.getElementById('part-title').value,
+        price: document.getElementById('part-price').value,
+        loc: document.getElementById('part-loc').value,
+        category: document.getElementById('part-category').value,
+        desc: document.getElementById('part-desc').value
+      };
+      swapParts.unshift(newPart);
+      renderParts(swapParts);
+      const msg = document.getElementById('part-msg');
+      msg.innerText = "✓ Part listing published to live US Swap Meet board!";
+      msg.classList.remove('hidden');
+      document.getElementById('part-form').reset();
+      setTimeout(() => {
+        closeModal('post-part-modal');
+        msg.classList.add('hidden');
+      }, 1500);
+    }
+
+    // 6. MODALS
+    function openModal(id) {
+      const el = document.getElementById(id);
+      if (el) { el.classList.remove('hidden'); el.classList.add('flex'); }
+    }
+    function closeModal(id) {
+      const el = document.getElementById(id);
+      if (el) { el.classList.add('hidden'); el.classList.remove('flex'); }
+    }
+
+    // Initialize
+    window.addEventListener('DOMContentLoaded', () => {
+      lucide.createIcons();
+      runCalculator();
+      renderTracks(usTracks);
+      renderParts(swapParts);
+    });
+  </script>
+</body>
+</html>
