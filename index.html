@@ -19,6 +19,12 @@
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 
+  <!-- Security Hardening & CSP (Optimized for AdSense & Performance) -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: blob: https:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://pagead2.googlesyndication.com https://*.googlesyndication.com https://*.google.com https://*.doubleclick.net https://cdn.tailwindcss.com https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: blob: https:; connect-src 'self' https://pagead2.googlesyndication.com https://ep1.adtrafficquality.google https://googleads.g.doubleclick.net https://*.google.com https://*.googlesyndication.com; frame-src 'self' https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://pagead2.googlesyndication.com https://*.google.com; child-src 'self' blob: https:;">
+
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -936,6 +942,17 @@
       }
     }
 
+    // XSS Mitigation Sanitizer
+    function escapeHTML(str) {
+      if (!str) return '';
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+    }
+
     // 5. RENDER SWAP MEET PARTS
     function renderParts(parts) {
       const container = document.getElementById('parts-board-grid');
@@ -943,14 +960,14 @@
         <div class="bg-chassis border border-slate-800 hover:border-neon-lime/40 transition-all rounded-xl p-5 flex flex-col justify-between">
           <div>
             <div class="flex items-center justify-between text-xs font-mono mb-2">
-              <span class="text-neon-acid font-extrabold text-base">${p.price}</span>
-              <span class="text-slate-500 text-[10px] bg-slate-800 px-2 py-0.5 rounded uppercase">${p.category}</span>
+              <span class="text-neon-acid font-extrabold text-base">${escapeHTML(p.price)}</span>
+              <span class="text-slate-500 text-[10px] bg-slate-800 px-2 py-0.5 rounded uppercase">${escapeHTML(p.category)}</span>
             </div>
-            <h4 class="font-stencil text-base text-white leading-tight mb-2">${p.title}</h4>
-            <p class="text-xs text-slate-400 mb-3 leading-relaxed font-mono">${p.desc}</p>
+            <h4 class="font-stencil text-base text-white leading-tight mb-2">${escapeHTML(p.title)}</h4>
+            <p class="text-xs text-slate-400 mb-3 leading-relaxed font-mono">${escapeHTML(p.desc)}</p>
           </div>
           <div class="border-t border-slate-800 pt-2 flex items-center justify-between text-[11px] font-mono text-slate-400">
-            <span>${p.loc}</span>
+            <span>${escapeHTML(p.loc)}</span>
             <span class="text-neon-lime font-bold">Verified Mod</span>
           </div>
         </div>
